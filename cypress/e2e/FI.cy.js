@@ -10,7 +10,7 @@ describe('Test Cases', () => {
 
 
   })
-  it('IF second test case', () => {
+  it('IF second test case-negative', () => {
     cy.visit('https://www.saucedemo.com/')
     cy.get("[data-test='username']") .type ('locked_out_user');
     cy.get('[data-test="password"]') .type ('secret_sauce');
@@ -52,7 +52,7 @@ describe('Test Cases', () => {
 
 
   })
-  it('IF sixth test case', () => {
+  it('IF sixth test case- negative', () => {
     cy.visit('https://www.saucedemo.com/')
     cy.get("[data-test='username']") .type ('problem_user');
     cy.get('[data-test="password"]') .type ('secret_sauce');
@@ -84,10 +84,10 @@ describe('Test Cases', () => {
     cy.contains('Shipping Information');
     cy.get('[data-test="finish"]').click();
     cy.url().should('include', 'checkout-complete.html');
-    cy.contains('THANK YOU FOR YOUR ORDER');
+    cy.contains('Thank you for your order!');
     
   })
-  it('IF eighth test case', () => {
+  it('IF eighth test case- negative', () => {
     cy.visit('https://www.saucedemo.com/')
     cy.get("[data-test='username']") .type ('problem_user');
     cy.get('[data-test="password"]') .type ('secret_sauce');
@@ -105,7 +105,7 @@ describe('Test Cases', () => {
     cy.contains('Shipping Information');
     cy.get('[data-test="finish"]').click();
     cy.url().should('include', 'checkout-complete.html');
-    cy.contains('THANK YOU FOR YOUR ORDER');
+    cy.contains('Thank you for your order!');
 
 
 
